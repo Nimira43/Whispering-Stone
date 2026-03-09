@@ -80,11 +80,46 @@ button:hover {
 }
 
 .response {
+  position: relative;
   margin-top: 25px;
   padding: 15px;
   background: var(--grey-5);
   border: 1px solid var(--grey-2);
-  min-height: 80px;
+  min-height: 150px;
+  max-height: 350px;      
+  overflow-y: auto;       
   white-space: pre-wrap;
   text-align: left;
+  line-height: 1.5;
+  border-radius: 4px;
+  scrollbar-width: thin; 
+  scrollbar-color: var(--main) var(--grey-4);
+}
+
+.response::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(to bottom, transparent, var(--grey-5));
+  pointer-events: none;
+}
+
+.response::-webkit-scrollbar {
+  width: 8px;
+}
+
+.response::-webkit-scrollbar-track {
+  background: var(--grey-4);
+}
+
+.response::-webkit-scrollbar-thumb {
+  background: var(--main);
+  border-radius: 4px;
+}
+
+.response::-webkit-scrollbar-thumb:hover {
+  background: #ff5f1a;
 }
