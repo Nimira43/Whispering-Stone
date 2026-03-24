@@ -10,10 +10,40 @@
   <div class="container">
     <h1 class="logo-text">Whispering Stone</h1>
     <p class="subtitle">Ask your question. The stone will answer.</p>
+
+    <div class="controls-row">
+      <div class="control-group">
+        <label for="mode">Mode</label>
+        <select id="mode">
+          <option value="strict">Strict factual</option>
+          <option value="interpretive">Interpretive</option>
+          <option value="oracle">Oracle</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="rememberToggle">Stone memory</label>
+        <input type="checkbox" id="rememberToggle">
+      </div>
+    </div>
+
     <textarea id="question" placeholder="Speak your query..."></textarea>
-    <button id="askBtn">Ask the Stone</button>
+
+    <div class="buttons-row">
+      <button id="askBtn">Ask the Stone</button>
+      <button id="stopBtn" class="secondary">Stop Whispering</button>
+    </div>
+
+    <div class="samples">
+      <span class="samples-label">Sample whispers:</span>
+      <button class="sample-btn">Explain quantum tunnelling simply.</button>
+      <button class="sample-btn">What secrets lie beneath the mountain?</button>
+      <button class="sample-btn">Summarise the causes of World War I.</button>
+    </div>
+
     <div id="response" class="response"></div>
   </div>
+
   <script src="app.js"></script>
 </body>
 </html>
